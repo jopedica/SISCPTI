@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}{{ projeto.get('titulo', 'Projeto') }} · SisCPTI{% endblock %}
+{% block content %}
+
+<section class="project-detail">
+  <div class="project-header">
+    <h1>{{ projeto.get('titulo', 'Sem título') }} 
+      <span class="status">({{ projeto.get('status', 'Sem status') }})</span>
+    </h1>
+    <p><strong>Professor responsável:</strong> {{ projeto.get('professor', '—') }}</p>
+    <p><strong>Categoria:</strong> {{ projeto.get('categoria', '—') }}</p>
+  </div>
+
+  <div class="project-body">
+    <div class="project-text">
+      {% if projeto.get('detalhes') %}
+        {% for paragrafo in projeto.detalhes %}
+          <p>{{ paragrafo }}</p>
+        {% endfor %}
+      {% else %}
+        <p>Informações detalhadas não disponíveis.</p>
+      {% endif %}
+    </div>
+
+    {% if projeto.get('imagem') %}
+    <div class="project-image">
+      <img src="{{ url_for('static', filename=projeto.imagem) }}" alt="{{ projeto.get('titulo', '') }}">
+    </div>
+    {% endif %}
+  </div>
+
+  {% if projeto.get('links') %}
+  <div class="project-links">
+    <h3>Mais informações</h3>
+    <ul>
+      {% for nome, link in projeto.links.items() %}
+        <li><a href="{{ link }}" target="_blank">{{ nome }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</section>
+
+{% if session.get('logged_in') %}
+  <form method="POST" action="{{ url_for('registrar_interesse', projeto_id=projeto.get('id')) }}" class="interest-form">
+    <button type="submit" class="btn-interest">Tenho Interesse</button>
+  </form>
+{% else %}
+  <p class="interest-hint"></p>
+{% endif %}
+
+{% endblock %}

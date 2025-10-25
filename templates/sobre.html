@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Sobre · SisCPTI{% endblock %}
+{% block content %}
+
+<section class="about-hero">
+  <div class="about-text">
+    <h1>
+      O que é o <span class="accent">&lt; SisCPTI &gt;</span>?
+    </h1>
+
+    <p class="about-desc">
+      O <strong>SisCPTI</strong> foi criado para <strong>centralizar, acompanhar e documentar</strong>
+      os projetos de Tecnologia da Informação do UniCEUB, proporcionando
+      <strong>maior transparência</strong> e <strong>integração</strong> entre as equipes acadêmicas
+      e administrativas.
+    </p>
+
+    <ul class="about-list">
+      <li>Centraliza todos os projetos de TI em um catálogo digital unificado;</li>
+      <li>Aproxima alunos, professores e empresas parceiras;</li>
+      <li>Oferece acompanhamento e status em tempo real;</li>
+      <li>Fortalece a inovação institucional do UniCEUB.</li>
+    </ul>
+  </div>
+
+  <div class="about-image">
+    <img src="{{ url_for('static', filename='Instituição.png') }}" alt="UniCEUB - Instituição" />
+  </div>
+</section>
+
+{% endblock %}

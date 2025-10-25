@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Login · SisCPTI{% endblock %}
+{% block content %}
+<h2>Acesso ao Sistema</h2>
+
+<form class="login-form" method="POST" action="{{ url_for('login') }}">
+  <label for="user">Usuário:</label>
+  <input type="text" id="user" name="user" placeholder="admin" required>
+
+  <label for="password">Senha:</label>
+  <input type="password" id="password" name="password" placeholder="123" required>
+
+  <button type="submit" class="btn">Entrar</button>
+</form>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div class="flash-messages">
+      {% for category, message in messages %}
+        <div class="flash {{ category }}">{{ message }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+{% endblock %}

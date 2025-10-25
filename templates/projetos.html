@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block title %}Projetos · SisCPTI{% endblock %}
+{% block content %}
+
+<h2>Projetos de Tecnologia da Informação</h2>
+
+<!-- ===================== -->
+<!-- Seção: Responsabilidade Social -->
+<!-- ===================== -->
+<h3>Projetos de Responsabilidade Social</h3>
+<div class="card-grid">
+  {% for p in projetos if p.categoria == "Responsabilidade Social" %}
+  <a href="{{ url_for('projeto_detalhes', projeto_id=p.id) }}" class="card-link">
+    <div class="card">
+      <h4>{{ p.titulo }}</h4>
+      <p><strong>Status:</strong> 
+  <span class="
+    {% if 'EXECUTADO' in p.status %}status-green
+    {% elif 'EXECUÇÃO' in p.status %}status-orange
+    {% elif 'INDISPONÍVEL' in p.status %}status-red
+    {% else %}status-gray{% endif %}
+  ">
+    {{ p.status }}
+  </span>
+</p>
+
+      <p><strong>Professor:</strong> {{ p.professor }}</p>
+      <p>{{ p.descricao_curta }}</p>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+<!-- ===================== -->
+<!-- Seção: Projetos do CEUB -->
+<!-- ===================== -->
+<h3>Projetos do CEUB</h3>
+<div class="card-grid">
+  {% for p in projetos if p.categoria == "Projetos do CEUB" %}
+  <a href="{{ url_for('projeto_detalhes', projeto_id=p.id) }}" class="card-link">
+    <div class="card">
+      <h4>{{ p.titulo }}</h4>
+      <p><strong>Status:</strong> 
+  <span class="
+    {% if 'EXECUTADO' in p.status %}status-green
+    {% elif 'EXECUÇÃO' in p.status %}status-orange
+    {% elif 'INDISPONÍVEL' in p.status %}status-red
+    {% else %}status-gray{% endif %}
+  ">
+    {{ p.status }}
+  </span>
+</p>
+
+      <p><strong>Professor:</strong> {{ p.professor }}</p>
+      <p>{{ p.descricao_curta }}</p>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+<!-- ===================== -->
+<!-- Seção: Projetos de Empresas do Setor Privado -->
+<!-- ===================== -->
+<h3>Projetos de Empresas do Setor Privado</h3>
+<div class="card-grid">
+  {% for p in projetos if p.categoria == "Empresas do Setor Privado" %}
+  <a href="{{ url_for('projeto_detalhes', projeto_id=p.id) }}" class="card-link">
+    <div class="card">
+      <h4>{{ p.titulo }}</h4>
+      <p><strong>Status:</strong> 
+  <span class="
+    {% if 'EXECUTADO' in p.status %}status-green
+    {% elif 'EXECUÇÃO' in p.status %}status-orange
+    {% elif 'INDISPONÍVEL' in p.status %}status-red
+    {% else %}status-gray{% endif %}
+  ">
+    {{ p.status }}
+  </span>
+</p>
+
+      <p><strong>Professor:</strong> {{ p.professor }}</p>
+      <p>{{ p.descricao_curta }}</p>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+
+{% endblock %}
