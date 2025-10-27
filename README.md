@@ -1,25 +1,21 @@
-# 🧠 SisCPTI — Sistema de Gestão do Caderno de Projetos de TI (UniCEUB)
+# SisCPTI — Sistema de Gestão do Caderno de Projetos de TI (UniCEUB)
 
-O **SisCPTI** é um sistema web desenvolvido em **Flask (Python)** com o objetivo de centralizar, acompanhar e documentar os **Projetos Integradores (PI/PF)** dos cursos de Tecnologia da Informação do **Centro Universitário de Brasília — UniCEUB**.
+Protótipo funcional de sistema web desenvolvido em Flask (Python), com o objetivo de centralizar, acompanhar e documentar os Projetos Integradores (PI/PF) dos cursos de Tecnologia da Informação do Centro Universitário de Brasília — UniCEUB.
 
-A aplicação permite que alunos, professores e parceiros acompanhem os projetos em andamento, visualizem detalhes, registrem interesse e submetam novas propostas. Além disso, administradores possuem acesso a uma área restrita de **CRUD** completo para gestão dos projetos.
-
+A proposta é demonstrar a arquitetura, a interface e o fluxo de funcionamento de uma aplicação que, futuramente, poderá ser expandida para um sistema completo com banco de dados e autenticação avançada.
 ---
 
-## 📚 **Sumário**
+## **Sumário**
 - [Objetivos do Projeto](#-objetivos-do-projeto)
 - [Funcionalidades Principais](#-funcionalidades-principais)
-- [Capturas de Tela](#-capturas-de-tela)
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
 - [Como Executar o Projeto](#-como-executar-o-projeto)
 - [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Perfis de Usuário](#-perfis-de-usuário)
 - [Futuras Implementações](#-futuras-implementações)
-- [Autores e Créditos](#-autores-e-créditos)
 
 ---
 
-## 🎯 **Objetivos do Projeto**
+##  **Objetivos do Projeto**
 
 > “Centralizar, acompanhar e documentar os Projetos Integradores de TI, promovendo transparência, integração e inovação.”
 
@@ -31,14 +27,13 @@ O SisCPTI foi criado para:
 
 ---
 
-## ⚙️ **Funcionalidades Principais**
+## **Funcionalidades Principais**
 
-### 👥 **Usuários**
+### **Usuários**
 - Login e cadastro de novos usuários.
 - Perfis diferenciados: **admin** e **usuário comum**.
-- Logout e controle de sessão com Flask.
 
-### 🧱 **Área Pública**
+### **Área Pública**
 - Exibição de todos os projetos de TI, separados por categoria:
   - Responsabilidade Social
   - Projetos do CEUB
@@ -46,26 +41,26 @@ O SisCPTI foi criado para:
 - Página de detalhes de cada projeto.
 - Botão **“Tenho Interesse”** (visível apenas para usuários logados).
 
-### 🛠️ **Área Administrativa (CRUD)**
+### **Área Administrativa (CRUD)**
 - Adição, edição e exclusão de projetos.
 - Visualização de todos os projetos no painel `/admin`.
 - Proteção por autenticação (`role = admin`).
 
-### 📥 **Submissão de Projetos**
+### **Submissão de Projetos**
 - Formulário para docentes e parceiros proporem novas ideias.
 - Armazenamento das submissões em `submissoes.json`.
 
 ---
 
-## 🧰 **Tecnologias Utilizadas**
+## **Tecnologias Utilizadas**
 
 | Tecnologia | Função |
 |-------------|--------|
-| 🐍 **Python 3.11+** | Linguagem principal |
-| 🔥 **Flask** | Framework web |
-| 🧩 **Jinja2** | Templates dinâmicos |
-| 🎨 **HTML5 + CSS3** | Estrutura e design |
-| 💾 **JSON Files** | Armazenamento simples de dados |
-| 🧑‍💻 **VS Code / Git** | Ambiente de desenvolvimento e controle de versão |
+| **Python 3.11+** | Linguagem principal |
+| **Flask** | Framework web |
+| **Jinja2** | Templates dinâmicos |
+| **HTML5 + CSS3** | Estrutura e design |
+| **JSON Files** | Armazenamento simples de dados |
+| **VS Code / Git** | Ambiente de desenvolvimento e controle de versão |
 
 ---
