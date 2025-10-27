@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% block title %}{{ 'Editar' if projeto else 'Novo' }} Projeto · SisCPTI{% endblock %}
+{% block content %}
+
+<section class="admin-form-section">
+  <h2>{{ 'Editar' if projeto else 'Novo' }} Projeto</h2>
+
+  <form method="POST" class="admin-form">
+    <div class="form-group">
+      <label for="titulo">Título:</label>
+      <input type="text" id="titulo" name="titulo" value="{{ projeto.titulo if projeto else '' }}" required>
+    </div>
+
+    <div class="form-group">
+      <label for="categoria">Categoria:</label>
+      <input type="text" id="categoria" name="categoria" value="{{ projeto.categoria if projeto else '' }}" required>
+    </div>
+
+    <div class="form-group">
+      <label for="status">Status:</label>
+      <input type="text" id="status" name="status" value="{{ projeto.status if projeto else '' }}" required>
+    </div>
+
+    <div class="form-group">
+      <label for="professor">Professor:</label>
+      <input type="text" id="professor" name="professor" value="{{ projeto.professor if projeto else '' }}">
+    </div>
+
+    <div class="form-group">
+      <label for="descricao_curta">Descrição curta:</label>
+      <textarea id="descricao_curta" name="descricao_curta" rows="2">{{ projeto.descricao_curta if projeto else '' }}</textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="detalhes">Detalhes:</label>
+      <textarea id="detalhes" name="detalhes" rows="5">{{ projeto.detalhes[0] if projeto else '' }}</textarea>
+    </div>
+
+    <button type="submit" class="btn-save"> Salvar Projeto</button>
+  </form>
+</section>
+
+<style>
+  .admin-form-section {
+    max-width: 700px;
+    margin: 3rem auto;
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+
+  .admin-form-section h2 {
+    color: #4B006E;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .admin-form .form-group {
+    margin-bottom: 1.2rem;
+  }
+
+  .admin-form label {
+    display: block;
+    font-weight: 600;
+    color: #4B006E;
+    margin-bottom: 0.4rem;
+  }
+
+  .admin-form input,
+  .admin-form textarea {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+  }
+
+  .admin-form input:focus,
+  .admin-form textarea:focus {
+    outline: none;
+    border-color: #7A1BB5;
+    box-shadow: 0 0 0 2px rgba(123, 27, 181, 0.2);
+  }
+
+  .btn-save {
+    display: block;
+    width: 100%;
+    background: #4B006E;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .btn-save:hover {
+    background: #7A1BB5;
+  }
+</style>
+
+{% endblock %}

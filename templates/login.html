@@ -1,25 +1,125 @@
 {% extends 'base.html' %}
 {% block title %}Login · SisCPTI{% endblock %}
 {% block content %}
-<h2>Acesso ao Sistema</h2>
 
-<form class="login-form" method="POST" action="{{ url_for('login') }}">
-  <label for="user">Usuário:</label>
-  <input type="text" id="user" name="user" placeholder="admin" required>
+<section class="login-section">
+  <h2>Acesso ao Sistema</h2>
 
-  <label for="password">Senha:</label>
-  <input type="password" id="password" name="password" placeholder="123" required>
+  <form class="login-form" method="POST" action="{{ url_for('login') }}">
+    <label for="user">Usuário:</label>
+    <input type="text" id="user" name="user" placeholder="admin" required>
 
-  <button type="submit" class="btn">Entrar</button>
-</form>
+    <label for="password">Senha:</label>
+    <input type="password" id="password" name="password" placeholder="123" required>
 
-{% with messages = get_flashed_messages(with_categories=true) %}
-  {% if messages %}
-    <div class="flash-messages">
-      {% for category, message in messages %}
-        <div class="flash {{ category }}">{{ message }}</div>
-      {% endfor %}
+    <button type="submit" class="btn btn-primary">Entrar</button>
+
+    <!-- Link para cadastro -->
+    <div class="register-link">
+      <p>Não tem uma conta?</p>
+      <a href="{{ url_for('cadastro') }}" class="btn btn-secondary">Cadastrar</a>
     </div>
-  {% endif %}
-{% endwith %}
+  </form>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="flash-messages">
+        {% for category, message in messages %}
+          <div class="flash {{ category }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+</section>
+
+<style>
+  .login-section {
+    max-width: 400px;
+    margin: 3rem auto;
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+  .login-section h2 {
+    color: #4B006E;
+    margin-bottom: 1.5rem;
+  }
+
+  .login-form label {
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    color: #4B006E;
+    margin-bottom: 0.3rem;
+  }
+
+  .login-form input {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+
+  .login-form input:focus {
+    border-color: #7A1BB5;
+    outline: none;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .btn-primary {
+    background: #4B006E;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: #7A1BB5;
+  }
+
+  .btn-secondary {
+    background: #e0e0e0;
+    color: #4B006E;
+  }
+
+  .btn-secondary:hover {
+    background: #ccc;
+  }
+
+  .register-link {
+    margin-top: 1rem;
+  }
+
+  .register-link p {
+    margin: 0.3rem 0;
+    color: #333;
+  }
+
+  .flash-messages {
+    margin-top: 1rem;
+  }
+
+  .flash {
+    background: #f3e6ff;
+    border: 1px solid #4B006E;
+    color: #4B006E;
+    padding: 0.6rem;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+</style>
+
 {% endblock %}

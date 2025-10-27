@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}SisCPTI · Caderno de Projetos TI UniCEUB{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-  
+
   <style>
-    /* === Estrutura para manter o footer no fim da página === */
+    /* ===== Estrutura base para manter o footer fixo ao final ===== */
     html, body {
       height: 100%;
       margin: 0;
@@ -16,48 +16,84 @@
     }
 
     main {
-      flex: 1; /* Ocupa o espaço disponível */
+      flex: 1;
     }
 
     footer {
-      margin-top: auto; /* Empurra o footer para o final */
+      margin-top: auto;
+    }
+
+    /* ===== Ajustes gerais ===== */
+    ul.nav-links {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+    }
+
+    ul.nav-links li a {
+      color: #4B006E;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    ul.nav-links li a:hover {
+      color: #7A1BB5;
+    }
+
+    footer {
+      background: #4B006E;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 
 <body>
-<header class="ceub-header">
-  <div class="ceub-container">
-    <img src="{{ url_for('static', filename='logoCEUB.png') }}" alt="CEUB" class="ceub-logo">
+  <!-- ===== CABEÇALHO CEUB ===== -->
+  <header class="ceub-header">
+    <div class="ceub-container">
+      <a href="{{ url_for('index') }}">
+        <img src="{{ url_for('static', filename='logoCEUB.png') }}" alt="Logo CEUB" class="ceub-logo">
+      </a>
 
-    <nav class="ceub-nav">
-      <ul class="nav-links">
-        <li><a href="{{ url_for('index') }}">Início</a></li>
-        <li><a href="{{ url_for('projetos') }}">Projetos</a></li>
-        <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
-{% if session.get('logged_in') %}
-  <li><a href="{{ url_for('submissao') }}">Submissão</a></li>
-  <li><a href="{{ url_for('logout') }}">Sair</a></li>
-{% else %}
-  <li><a href="{{ url_for('login') }}">Login</a></li>
-{% endif %}
+      <nav class="ceub-nav">
+        <ul class="nav-links">
+          <li><a href="{{ url_for('index') }}">Início</a></li>
+          <li><a href="{{ url_for('projetos') }}">Projetos</a></li>
+          <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
 
-      </ul>
-    </nav>
-  </div>
+          {% if session.get('logged_in') %}
+            {% if session.get('role') == 'admin' %}
+              <li><a href="{{ url_for('admin_dashboard') }}">Painel Admin</a></li>
+            {% endif %}
+            <li><a href="{{ url_for('submissao') }}">Submissão</a></li>
+            <li><a href="{{ url_for('logout') }}">Sair ({{ session.get('user') }})</a></li>
+          {% else %}
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    </div>
 
-  <!-- linha roxa inferior -->
-  <div class="ceub-line"></div>
-</header>
+    <!-- Linha roxa inferior -->
+    <div class="ceub-line"></div>
+  </header>
 
-
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
   <main>
-    {% block content %}
-    {% endblock %}
+    {% block content %}{% endblock %}
   </main>
 
+  <!-- ===== RODAPÉ ===== -->
   <footer>
-    <p>© 2025 UniCEUB · Caderno de Projetos de TI (SisCPTI)</p>
+    <p>© 2025 UniCEUB · Sistema de Gestão do Caderno de Projetos de TI (SisCPTI)</p>
   </footer>
 
   <script src="{{ url_for('static', filename='script.js') }}"></script>

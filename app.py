@@ -44,10 +44,8 @@ def registrar_interesse(projeto_id):
         flash("⚠️ Você precisa estar logado para demonstrar interesse em um projeto.", "error")
         return redirect(url_for('login'))
 
-    # Simula o registro (poderia salvar em JSON ou banco de dados futuramente)
     flash(f"✅ Interesse registrado com sucesso no projeto ID {projeto_id}!", "success")
     return redirect(url_for('projeto_detalhes', projeto_id=projeto_id))
-
 
 
 @app.route('/sobre')
@@ -56,7 +54,7 @@ def sobre():
 
 
 # =========================
-# Login simples (simulado)
+# Login com níveis de acesso (admin / user)
 # =========================
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -64,25 +62,173 @@ def login():
         user = request.form.get('user')
         password = request.form.get('password')
 
-        # Simulação simples de login
-        if user == "admin" and password == "123":
+        # Carrega usuários do arquivo JSON
+        with open('users.json', 'r', encoding='utf-8') as f:
+            users = json.load(f)
+
+        # Busca usuário correspondente
+        usuario = next((u for u in users if u['username'] == user and u['password'] == password), None)
+
+        if usuario:
             session['logged_in'] = True
-            return redirect(url_for('index'))
+            session['user'] = usuario['username']
+            session['role'] = usuario['role']
+
+            if usuario['role'] == 'admin':
+                flash(f"👑 Bem-vindo, administrador {usuario['username']}!", "success")
+                return redirect(url_for('admin_dashboard'))
+            else:
+                flash(f"✅ Login realizado com sucesso, {usuario['username']}!", "success")
+                return redirect(url_for('index'))
         else:
-            flash("Usuário ou senha incorretos!", "error")
+            flash("❌ Usuário ou senha incorretos!", "error")
             return redirect(url_for('login'))
 
     return render_template('login.html')
 
 
+@app.route('/cadastro', methods=['GET', 'POST'])
+def cadastro():
+    users_file = "users.json"
+
+    # Garante que o arquivo existe
+    if not os.path.exists(users_file):
+        with open(users_file, "w", encoding="utf-8") as f:
+            json.dump([], f)
+
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+        confirm = request.form.get('confirm')
+
+        # Validações básicas
+        if password != confirm:
+            flash("❌ As senhas não coincidem.", "error")
+            return redirect(url_for('cadastro'))
+
+        with open(users_file, "r", encoding="utf-8") as f:
+            users = json.load(f)
+
+        # Verifica se o usuário já existe
+        if any(u["username"] == username for u in users):
+            flash("⚠️ Este nome de usuário já está em uso.", "error")
+            return redirect(url_for('cadastro'))
+
+        # Cria novo usuário padrão (role = user)
+        novo_usuario = {
+            "username": username,
+            "password": password,
+            "role": "user"
+        }
+
+        users.append(novo_usuario)
+        with open(users_file, "w", encoding="utf-8") as f:
+            json.dump(users, f, indent=4, ensure_ascii=False)
+
+        flash("✅ Cadastro realizado com sucesso! Faça login para continuar.", "success")
+        return redirect(url_for('login'))
+
+    return render_template('cadastro.html')
+
+
+# =========================
+# Área administrativa (CRUD)
+# =========================
+
+@app.route('/admin')
+def admin_dashboard():
+    if session.get('role') != 'admin':
+        flash("Acesso restrito. Faça login como administrador.", "error")
+        return redirect(url_for('login'))
+
+    projetos = carregar_projetos()
+    return render_template('admin_dashboard.html', projetos=projetos)
+
+
+@app.route('/admin/novo', methods=['GET', 'POST'])
+def novo_projeto():
+    if session.get('role') != 'admin':
+        flash("Acesso restrito a administradores.", "error")
+        return redirect(url_for('index'))
+
+    if request.method == 'POST':
+        projetos = carregar_projetos()
+        novo = {
+            "id": len(projetos) + 1,
+            "titulo": request.form['titulo'],
+            "categoria": request.form['categoria'],
+            "status": request.form['status'],
+            "professor": request.form['professor'],
+            "descricao_curta": request.form['descricao_curta'],
+            "detalhes": [request.form['detalhes']],
+            "imagem": "img/default.png",
+            "links": {}
+        }
+        projetos.append(novo)
+        with open("projects_data.json", "w", encoding="utf-8") as f:
+            json.dump(projetos, f, indent=4, ensure_ascii=False)
+        flash("✅ Projeto criado com sucesso!", "success")
+        return redirect(url_for('admin_dashboard'))
+
+    return render_template('admin_form.html', projeto=None)
+
+
+@app.route('/admin/editar/<int:projeto_id>', methods=['GET', 'POST'])
+def editar_projeto(projeto_id):
+    if session.get('role') != 'admin':
+        flash("Acesso restrito a administradores.", "error")
+        return redirect(url_for('index'))
+
+    projetos = carregar_projetos()
+    projeto = next((p for p in projetos if p["id"] == projeto_id), None)
+    if not projeto:
+        abort(404)
+
+    if request.method == 'POST':
+        projeto["titulo"] = request.form['titulo']
+        projeto["categoria"] = request.form['categoria']
+        projeto["status"] = request.form['status']
+        projeto["professor"] = request.form['professor']
+        projeto["descricao_curta"] = request.form['descricao_curta']
+        projeto["detalhes"] = [request.form['detalhes']]
+
+        with open("projects_data.json", "w", encoding="utf-8") as f:
+            json.dump(projetos, f, indent=4, ensure_ascii=False)
+
+        flash("✅ Projeto atualizado com sucesso!", "success")
+        return redirect(url_for('admin_dashboard'))
+
+    return render_template('admin_form.html', projeto=projeto)
+
+
+@app.route('/admin/excluir/<int:projeto_id>')
+def excluir_projeto(projeto_id):
+    if session.get('role') != 'admin':
+        flash("Acesso restrito a administradores.", "error")
+        return redirect(url_for('index'))
+
+    projetos = carregar_projetos()
+    projetos = [p for p in projetos if p["id"] != projeto_id]
+
+    with open("projects_data.json", "w", encoding="utf-8") as f:
+        json.dump(projetos, f, indent=4, ensure_ascii=False)
+
+    flash("🗑️ Projeto excluído com sucesso!", "success")
+    return redirect(url_for('admin_dashboard'))
+
+
+# =========================
+# Logout
+# =========================
 @app.route('/logout')
 def logout():
-    session.pop('logged_in', None)
+    session.clear()
+    flash("Você saiu do sistema.", "info")
     return redirect(url_for('index'))
 
 
 # =========================
-# Submissão de projetos (restrita)
+# Submissão de projetos (restrita a logados)
 # =========================
 @app.route('/submissao', methods=['GET', 'POST'])
 def submissao():

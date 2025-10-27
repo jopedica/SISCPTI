@@ -1,291 +1,290 @@
 [
-  {
-    "id": 1,
-    "titulo": "Projeto INASP - Instituto Nacional de Saúde Psíquica",
-    "status": "EM EXECUÇÃO",
-    "professor": "Weslley",
-    "categoria": "Responsabilidade Social",
-    "descricao_curta": "Apoio psicológico e social com foco em saúde mental e prevenção, conduzido pelo Instituto Nacional de Saúde Psíquica (INASP).",
-    "imagem": "img/inasp.png",
-    "detalhes": [
-      "O Instituto Nacional de Saúde Psíquica – INASP foi criado em 2003, no Hospital São Vicente de Paula. O INASP tem por finalidade formular projetos e propostas de políticas públicas de saúde psíquica, atuando nas áreas de convivência familiar, geração de emprego e renda, educação e capacitação profissional.",
-      "A organização promove ações em defesa da saúde mental, combate à vulnerabilidade social e oferta de atendimentos psicológicos e psiquiátricos gratuitos a pessoas de baixa renda.",
-      "Atualmente, conta com uma equipe de profissionais voluntários e promove seminários, cursos e campanhas de prevenção.",
-      "Exemplo de necessidade de TI: aperfeiçoamento do sistema de informática e audiovisual do INASP."
-    ],
-    "links": {}
-  },
-  {
-    "id": 2,
-    "titulo": "Projeto Instituto Umanizzare",
-    "status": "DISPONÍVEL",
-    "professor": "-",
-    "categoria": "Responsabilidade Social",
-    "descricao_curta": "Ambiente de acolhimento e transformação para mulheres, com ações sociais e desenvolvimento pessoal.",
-    "imagem": "img/umanizzare.png",
-    "detalhes": [
-      "O Instituto Umanizzare oferece um ambiente seguro e acolhedor para o crescimento, fortalecimento e transformação da vida de mulheres.",
-      "Missão: Proporcionar um ambiente de acolhimento e transformação para mulheres.",
-      "Visão: Ser referência nacional no acolhimento e desenvolvimento feminino, contribuindo para uma sociedade mais justa e igualitária.",
-      "Valores: Alegria, Coragem, Gratidão e Sororidade.",
-      "Exemplo de necessidade de TI: criação de website institucional e plataforma de divulgação de notícias e eventos."
-    ],
-    "links": {}
-  },
-  {
-    "id": 3,
-    "titulo": "Instituto CONDES: Vital Interação",
-    "status": "DISPONÍVEL",
-    "professor": "—",
-    "categoria": "Responsabilidade Social",
-    "descricao_curta": "Apoia o Terceiro Setor no aprimoramento e criação de soluções para captação de recursos e cursos online.",
-    "imagem": "img/condes.png",
-    "detalhes": [
-      "O Instituto Condes: Vital Interação foi fundado em 2016 e tem como objetivo apoiar organizações do Terceiro Setor na busca de aprimoramento e adaptação a novas demandas e oportunidades.",
-      "A organização atua no fortalecimento de parcerias, capacitação de voluntários e fomento de cursos e pesquisas.",
-      "Exemplos de necessidades de TI: criação de página na internet; otimização de processos internos; e criação de plataforma de cursos online para captação de recursos e voluntários."
-    ],
-    "links": {}
-  },
-  {
-    "id": 4,
-    "titulo": "IBRH - Instituto Brasil Respeito Humano",
-    "status": "DISPONÍVEL",
-    "professor": "—",
-    "categoria": "Responsabilidade Social",
-    "descricao_curta": "Promove inclusão social e esportiva por meio do projeto Inclusão E-Sports, focado em jovens de baixa renda.",
-    "imagem": "img/ibrh.png",
-    "detalhes": [
-      "Fundado em 2002, o IBRH realiza trabalhos voltados à inclusão social, democratização do acesso ao esporte e defesa dos direitos sociais de pessoas em situação de vulnerabilidade.",
-      "A instituição oferece atividades de capacitação, esportes e inclusão digital, com foco em jovens e adolescentes.",
-      "Projeto destaque: Inclusão E-Sports — primeiro centro de treinamento gamer de Brasília, oferecendo aulas gratuitas de inglês, programação e jogos eletrônicos.",
-      "Exemplos de necessidades de TI: suporte à plataforma de e-learning, divulgação e registro de participantes."
-    ],
-    "links": {}
-  },
-  {
-    "id": 5,
-    "titulo": "ASP - Ação Social do Planalto",
-    "status": "DISPONÍVEL",
-    "professor": "-",
-    "categoria": "Responsabilidade Social",
-    "descricao_curta": "Serviço de convivência e fortalecimento de vínculos familiares com foco em jovens em vulnerabilidade social.",
-    "imagem": "img/asp.png",
-    "detalhes": [
-      "A Ação Social do Planalto atua desde 1963 em ações socioeducativas voltadas à juventude de Brasília, atendendo cerca de 200 crianças e adolescentes de 6 a 17 anos.",
-      "Necessidades de TI: manutenção de equipamentos, atualização de software, capacitação de funcionários e uso de tecnologias educacionais.",
-      "Contribuição prática: projetos de programação e robótica, plataformas de feedback, análise de dados e criação de software de gestão de atividades e relatórios."
-    ],
-    "links": {}
-  },
-  {
-    "id": 6,
-    "titulo": "Centro de Educação de Jovens e Adultos Asa Sul – CESAS",
-    "status": "EXECUTADO",
-    "professor": "Weslley",
-    "categoria": "Responsabilidade Social",
-    "descricao_curta": "Projeto de Ciência de Dados Educacionais — automação de tabelas e análise de dados escolares.",
-    "imagem": "img/cesas.png",
-    "detalhes": [
-      "O projeto visa automatizar tabelas de acompanhamento dos alunos matriculados no sistema I-Educar e realizar análise exploratória dos dados escolares.",
-      "Conduzido pelo colaborador Flavio do CESAS, o projeto permite compreender padrões de comportamento e desempenho dos alunos, auxiliando nas reuniões pedagógicas e decisões de melhoria.",
-      "Exemplo de necessidade de TI: desenvolvimento de dashboard analítico e ferramenta de visualização de dados estudantis."
-    ],
-    "links": {}
-  },
-  {
-    "id": 7,
-    "titulo": "Projeto de Cadastro de Matrículas para Analfabetos",
-    "status": "EXECUTADO",
-    "professor": "Walner",
-    "categoria": "Responsabilidade Social",
-    "descricao_curta": "Protótipo de sistema de matrículas para alunos analfabetos, com acessibilidade por áudio e envio de documentos.",
-    "imagem": "img/cesas.png",
-    "detalhes": [
-      "Desenvolvido por alunos do CEUB, o projeto criou um MVP funcional para cadastro de matrículas de alunos analfabetos, gerando ótima aceitação pela escola CESAS.",
-      "O sistema oferece acesso por áudio e upload de imagens, garantindo acessibilidade.",
-      "Gestor do projeto: Prof. Walner de Oliveira – CEUB."
-    ],
-    "links": {}
-  },
-  {
-    "id": 8,
-    "titulo": "APABB - Associação de Pais, Amigos e Pessoas com Deficiência, de Funcionários do Banco do Brasil",
-    "status": "EM EXECUÇÃO",
-    "professor": "Alexandre / Walner",
-    "categoria": "Responsabilidade Social",
-    "descricao_curta": "Aplicativo para captação de recursos financeiros e voluntários para a associação APABB.",
-    "imagem": "img/apabb.png",
-    "detalhes": [
-      "A APABB desenvolve um sistema em camadas para captação de recursos financeiros e voluntários.",
-      "O projeto visa criar um ambiente digital onde empresas possam investir e voluntários se cadastrar para apoiar projetos sociais da instituição.",
-      "A comunidade da APABB está presente em 15 estados e atua para promover inclusão e oportunidades para pessoas com deficiência.",
-      "Necessidade de TI: desenvolvimento de um aplicativo CRUD para projetos ativos e inscrição de voluntários."
-    ],
-    "links": {}
-  },
-  {
-    "id": 9,
-    "titulo": "Projeto: Geração de Grade Horária de Professores",
-    "status": "EXECUTADO",
-    "professor": "Sergio / Walner",
-    "categoria": "Projetos do CEUB",
-    "descricao_curta": "Sistema para otimizar a alocação de professores e turmas, reduzindo conflitos de horários e melhorando a gestão acadêmica.",
-    "imagem": "img/grade.png",
-    "detalhes": [
-      "A coordenação da FATECS CEUB enfrenta desafios para conciliar horários de professores e disciplinas em diferentes turnos e campi.",
-      "O projeto visa automatizar a criação das grades horárias, permitindo melhor aproveitamento docente e evitando conflitos.",
-      "Processos envolvidos: levantamento de disponibilidade, previsão de abertura de turmas e alocação automática conforme regras institucionais.",
-      "Gestor do Caderno: Prof. Walner de Oliveira – CEUB."
-    ],
-    "links": {}
-  },
-  {
-    "id": 10,
-    "titulo": "Projeto: Análise de Padrões de Comportamento nos Vídeos de Segurança CEUB",
-    "status": "DISPONÍVEL",
-    "professor": "Walner",
-    "categoria": "Projetos do CEUB",
-    "descricao_curta": "Monitoramento inteligente por vídeo para detectar situações de risco em tempo real.",
-    "imagem": "img/seguranca.png",
-    "detalhes": [
-      "A equipe de segurança do CEUB possui câmeras distribuídas em vários campi. O projeto propõe um sistema de IA que identifica comportamentos anômalos para aumentar a segurança.",
-      "O sistema poderá enviar alertas automáticos em casos de risco, como tumultos, quedas ou acidentes.",
-      "Gestor do Caderno: Prof. Walner de Oliveira – CEUB."
-    ],
-    "links": {}
-  },
-  {
-    "id": 11,
-    "titulo": "Projeto: Sistema de Controle e Medidas de Flexibilidade e Esforço Físico CEUB",
-    "status": "DISPONÍVEL",
-    "professor": "André Arantes / Walner",
-    "categoria": "Projetos do CEUB",
-    "descricao_curta": "Sistema de automação para coleta e análise de dados de flexibilidade e esforço físico em alunos de escolas.",
-    "imagem": "img/esforco.png",
-    "detalhes": [
-      "O projeto é uma continuidade de iniciativa desenvolvida em 2024 para controle de medidas de flexibilidade e esforço físico.",
-      "Desenvolvido em parceria com o curso de Educação Física do CEUB, coleta dados e gera relatórios sobre desempenho estudantil.",
-      "Gestor do Caderno: Prof. Walner de Oliveira – CEUB."
-    ],
-    "links": {}
-  },
-  {
-    "id": 12,
-    "titulo": "Projeto: Automação da Categorização de Transcrições",
-    "status": "EXECUTADO",
-    "professor": "Walner",
-    "categoria": "Projetos do CEUB",
-    "descricao_curta": "Sistema para automatizar a categorização de transcrições de pesquisa em Psicologia, reduzindo o esforço manual.",
-    "imagem": "img/transcricoes.png",
-    "detalhes": [
-      "O projeto propõe um sistema que utiliza planilhas Excel e arquivos JSON para automatizar a categorização de transcrições.",
-      "A solução visa reduzir o tempo de análise, aumentar a precisão e consistência e otimizar o trabalho dos pesquisadores.",
-      "Benefícios: redução do trabalho manual, maior precisão e escalabilidade, além de otimização do tempo dos pesquisadores.",
-      "Gestor do Caderno: Prof. Walner de Oliveira – CEUB."
-    ],
-    "links": {}
-  },
-  {
-    "id": 13,
-    "titulo": "Projeto: Sistema de Gestão do Caderno de Projetos de TI - SisCPTI",
-    "status": "DISPONÍVEL",
-    "professor": "-",
-    "categoria": "Projetos do CEUB",
-    "descricao_curta": "Sistema para cadastro, acompanhamento e sugestão de novos projetos de TI do CEUB.",
-    "imagem": "img/siscpti.png",
-    "detalhes": [
-      "O SisCPTI centraliza, acompanha e documenta os projetos de TI do CEUB.",
-      "Principais funcionalidades: visualização dos projetos, sugestão de novos projetos e acompanhamento geral do portfólio."
-    ],
-    "links": {}
-  },
-  {
-    "id": 14,
-    "titulo": "Projeto AuMeow",
-    "status": "EM EXECUÇÃO",
-    "professor": "Flaviana / Walner / Valdemir",
-    "categoria": "Projetos do CEUB",
-    "descricao_curta": "Aplicativo para gestão de cuidados, serviços e vacinação de animais de estimação.",
-    "imagem": "img/aumeow.png",
-    "detalhes": [
-      "O aplicativo AuMeow foi criado para facilitar a vida dos donos de pets, oferecendo controle de vacinas, marketplace e canal de comunicação entre tutores e profissionais.",
-      "O sistema atende demandas reais de praticidade e organização para quem adota ou compra animais, integrando diversos serviços.",
-      "Gestores do Caderno: Prof. Walner de Oliveira, Prof. Valdemir e Prof. Flaviana – CEUB."
-    ],
-    "links": {}
-  },
- {
-    "id": 15,
-    "titulo": "Análise exploratória para tomada de decisões em Gestão Educacional",
-    "status": "EM EXECUÇÃO",
-    "professor": "Juliana / Walner",
-    "categoria": "Empresas do Setor Privado",
-    "descricao_curta": "Projeto voltado à modernização da gestão educacional e uso de dados e blockchain para análise estratégica.",
-    "imagem": "img/isg.png",
-    "detalhes": [
-      "A ISG atua na modernização da gestão pública e privada e busca diferenciação no mercado por meio de inovação em dados e blockchain."
-    ]
-  },
-  {
-    "id": 16,
-    "titulo": "Projeto Canal Educação na Secretaria de Educação do Estado do Piauí",
-    "status": "DISPONÍVEL",
-    "professor": "Walner",
-    "categoria": "Empresas do Setor Privado",
-    "descricao_curta": "Infraestrutura digital educacional robusta oferecida pela Oros Soluções Educacionais.",
-    "imagem": "img/oros.png",
-    "detalhes": [
-      "A Oros oferece plataformas digitais inovadoras e recursos interativos voltados a secretarias e instituições de ensino."
-    ]
-  },
-  {
-    "id": 17,
-    "titulo": "Projeto de Gerenciamento de Kits de Mediação Tecnológica",
-    "status": "DISPONÍVEL",
-    "professor": "Walner",
-    "categoria": "Empresas do Setor Privado",
-    "descricao_curta": "Solução para gestão eficiente de equipamentos nos polos da Oros Soluções Educacionais.",
-    "imagem": "img/oros.png",
-    "detalhes": [
-      "O projeto propõe sistema de controle de kits de mediação tecnológica e rastreabilidade de equipamentos."
-    ]
-  },
-  {
-    "id": 18,
-    "titulo": "Algoritmo de Correção Automática de Redação e de Individualização do Ensino",
-    "status": "DISPONÍVEL",
-    "professor": "Walner",
-    "categoria": "Empresas do Setor Privado",
-    "descricao_curta": "Plataforma de ensino adaptativo com IA e metaverso, desenvolvida pela Estudologia.",
-    "imagem": "img/estudologia.png",
-    "detalhes": [
-      "A Estudologia atua com ensino adaptativo e metaverso, buscando escalabilidade e inovação em inteligência artificial."
-    ]
-  },
-  {
-    "id": 19,
-    "titulo": "Implementação Adicional no Software Smart Canvas",
-    "status": "DISPONÍVEL",
-    "professor": "Walner",
-    "categoria": "Empresas do Setor Privado",
-    "descricao_curta": "Integrações e melhorias no software Smart Canvas, plataforma de gestão estratégica ágil.",
-    "imagem": "img/smartcanvas.png",
-    "detalhes": [
-      "A EPTG Soluções Ágeis desenvolve o Smart Canvas, sistema usado por mais de 500 clientes e que busca integração com APIs externas."
-    ]
-  },
-  {
-    "id": 20,
-    "titulo": "Projeto TIA – Tutora de Inteligência Artificial Interativa",
-    "status": "INDISPONÍVEL",
-    "professor": "Walner / Juliana",
-    "categoria": "Empresas do Setor Privado",
-    "descricao_curta": "Plataforma de aprendizado online baseada em IA para personalização do ensino e feedback em tempo real.",
-    "imagem": "img/tia.png",
-    "detalhes": [
-      "A TIA é uma plataforma que utiliza IA para personalizar o ensino, analisando o desempenho dos alunos e sugerindo trilhas de aprendizado.",
-      "Objetivos tecnológicos: avatar interativo, PLN avançado e integração segura em nuvem."
-    ]
-  }
+    {
+        "id": 1,
+        "titulo": "Projeto INASP - Instituto Nacional de Saúde Psíquica",
+        "status": "EM EXECUÇÃO",
+        "professor": "Weslley",
+        "categoria": "Responsabilidade Social",
+        "descricao_curta": "Apoio psicológico e social com foco em saúde mental e prevenção, conduzido pelo Instituto Nacional de Saúde Psíquica (INASP).",
+        "imagem": "img/inasp.png",
+        "detalhes": [
+            "O Instituto Nacional de Saúde Psíquica – INASP foi criado em 2003, no Hospital São Vicente de Paula. O INASP tem por finalidade formular projetos e propostas de políticas públicas de saúde psíquica, atuando nas áreas de convivência familiar, geração de emprego e renda, educação e capacitação profissional.",
+            "A organização promove ações em defesa da saúde mental, combate à vulnerabilidade social e oferta de atendimentos psicológicos e psiquiátricos gratuitos a pessoas de baixa renda.",
+            "Atualmente, conta com uma equipe de profissionais voluntários e promove seminários, cursos e campanhas de prevenção.",
+            "Exemplo de necessidade de TI: aperfeiçoamento do sistema de informática e audiovisual do INASP."
+        ],
+        "links": {}
+    },
+    {
+        "id": 2,
+        "titulo": "Projeto Instituto Umanizzare",
+        "status": "DISPONÍVEL",
+        "professor": "-",
+        "categoria": "Responsabilidade Social",
+        "descricao_curta": "Ambiente de acolhimento e transformação para mulheres, com ações sociais e desenvolvimento pessoal.",
+        "imagem": "img/umanizzare.png",
+        "detalhes": [
+            "O Instituto Umanizzare oferece um ambiente seguro e acolhedor para o crescimento, fortalecimento e transformação da vida de mulheres.",
+            "Missão: Proporcionar um ambiente de acolhimento e transformação para mulheres.",
+            "Visão: Ser referência nacional no acolhimento e desenvolvimento feminino, contribuindo para uma sociedade mais justa e igualitária.",
+            "Valores: Alegria, Coragem, Gratidão e Sororidade.",
+            "Exemplo de necessidade de TI: criação de website institucional e plataforma de divulgação de notícias e eventos."
+        ],
+        "links": {}
+    },
+    {
+        "id": 3,
+        "titulo": "Instituto CONDES: Vital Interação",
+        "status": "DISPONÍVEL",
+        "professor": "—",
+        "categoria": "Responsabilidade Social",
+        "descricao_curta": "Apoia o Terceiro Setor no aprimoramento e criação de soluções para captação de recursos e cursos online.",
+        "imagem": "img/condes.png",
+        "detalhes": [
+            "O Instituto Condes: Vital Interação foi fundado em 2016 e tem como objetivo apoiar organizações do Terceiro Setor na busca de aprimoramento e adaptação a novas demandas e oportunidades.",
+            "A organização atua no fortalecimento de parcerias, capacitação de voluntários e fomento de cursos e pesquisas.",
+            "Exemplos de necessidades de TI: criação de página na internet; otimização de processos internos; e criação de plataforma de cursos online para captação de recursos e voluntários."
+        ],
+        "links": {}
+    },
+    {
+        "id": 4,
+        "titulo": "IBRH - Instituto Brasil Respeito Humano",
+        "status": "DISPONÍVEL",
+        "professor": "—",
+        "categoria": "Responsabilidade Social",
+        "descricao_curta": "Promove inclusão social e esportiva por meio do projeto Inclusão E-Sports, focado em jovens de baixa renda.",
+        "imagem": "img/ibrh.png",
+        "detalhes": [
+            "Fundado em 2002, o IBRH realiza trabalhos voltados à inclusão social, democratização do acesso ao esporte e defesa dos direitos sociais de pessoas em situação de vulnerabilidade.",
+            "A instituição oferece atividades de capacitação, esportes e inclusão digital, com foco em jovens e adolescentes.",
+            "Projeto destaque: Inclusão E-Sports — primeiro centro de treinamento gamer de Brasília, oferecendo aulas gratuitas de inglês, programação e jogos eletrônicos.",
+            "Exemplos de necessidades de TI: suporte à plataforma de e-learning, divulgação e registro de participantes."
+        ],
+        "links": {}
+    },
+    {
+        "id": 5,
+        "titulo": "ASP - Ação Social do Planalto",
+        "status": "DISPONÍVEL",
+        "professor": "-",
+        "categoria": "Responsabilidade Social",
+        "descricao_curta": "Serviço de convivência e fortalecimento de vínculos familiares com foco em jovens em vulnerabilidade social.",
+        "imagem": "img/asp.png",
+        "detalhes": [
+            "A Ação Social do Planalto atua desde 1963 em ações socioeducativas voltadas à juventude de Brasília, atendendo cerca de 200 crianças e adolescentes de 6 a 17 anos.",
+            "Necessidades de TI: manutenção de equipamentos, atualização de software, capacitação de funcionários e uso de tecnologias educacionais.",
+            "Contribuição prática: projetos de programação e robótica, plataformas de feedback, análise de dados e criação de software de gestão de atividades e relatórios."
+        ],
+        "links": {}
+    },
+    {
+        "id": 6,
+        "titulo": "Centro de Educação de Jovens e Adultos Asa Sul – CESAS",
+        "status": "EXECUTADO",
+        "professor": "Weslley",
+        "categoria": "Responsabilidade Social",
+        "descricao_curta": "Projeto de Ciência de Dados Educacionais — automação de tabelas e análise de dados escolares.",
+        "imagem": "img/cesas.png",
+        "detalhes": [
+            "O projeto visa automatizar tabelas de acompanhamento dos alunos matriculados no sistema I-Educar e realizar análise exploratória dos dados escolares.",
+            "Conduzido pelo colaborador Flavio do CESAS, o projeto permite compreender padrões de comportamento e desempenho dos alunos, auxiliando nas reuniões pedagógicas e decisões de melhoria.",
+            "Exemplo de necessidade de TI: desenvolvimento de dashboard analítico e ferramenta de visualização de dados estudantis."
+        ],
+        "links": {}
+    },
+    {
+        "id": 7,
+        "titulo": "Projeto de Cadastro de Matrículas para Analfabetos",
+        "status": "EXECUTADO",
+        "professor": "Walner",
+        "categoria": "Responsabilidade Social",
+        "descricao_curta": "Protótipo de sistema de matrículas para alunos analfabetos, com acessibilidade por áudio e envio de documentos.",
+        "imagem": "img/cesas.png",
+        "detalhes": [
+            "Desenvolvido por alunos do CEUB, o projeto criou um MVP funcional para cadastro de matrículas de alunos analfabetos, gerando ótima aceitação pela escola CESAS.",
+            "O sistema oferece acesso por áudio e upload de imagens, garantindo acessibilidade.",
+            "Gestor do projeto: Prof. Walner de Oliveira – CEUB."
+        ],
+        "links": {}
+    },
+    {
+        "id": 8,
+        "titulo": "APABB - Associação de Pais, Amigos e Pessoas com Deficiência, de Funcionários do Banco do Brasil",
+        "status": "EM EXECUÇÃO",
+        "professor": "Alexandre / Walner",
+        "categoria": "Responsabilidade Social",
+        "descricao_curta": "Aplicativo para captação de recursos financeiros e voluntários para a associação APABB.",
+        "imagem": "img/apabb.png",
+        "detalhes": [
+            "A APABB desenvolve um sistema em camadas para captação de recursos financeiros e voluntários.",
+            "O projeto visa criar um ambiente digital onde empresas possam investir e voluntários se cadastrar para apoiar projetos sociais da instituição.",
+            "A comunidade da APABB está presente em 15 estados e atua para promover inclusão e oportunidades para pessoas com deficiência.",
+            "Necessidade de TI: desenvolvimento de um aplicativo CRUD para projetos ativos e inscrição de voluntários."
+        ],
+        "links": {}
+    },
+    {
+        "id": 9,
+        "titulo": "Projeto: Geração de Grade Horária de Professores",
+        "status": "EXECUTADO",
+        "professor": "Sergio / Walner",
+        "categoria": "Projetos do CEUB",
+        "descricao_curta": "Sistema para otimizar a alocação de professores e turmas, reduzindo conflitos de horários e melhorando a gestão acadêmica.",
+        "imagem": "img/grade.png",
+        "detalhes": [
+            "A coordenação da FATECS CEUB enfrenta desafios para conciliar horários de professores e disciplinas em diferentes turnos e campi.",
+            "O projeto visa automatizar a criação das grades horárias, permitindo melhor aproveitamento docente e evitando conflitos.",
+            "Processos envolvidos: levantamento de disponibilidade, previsão de abertura de turmas e alocação automática conforme regras institucionais.",
+            "Gestor do Caderno: Prof. Walner de Oliveira – CEUB."
+        ],
+        "links": {}
+    },
+    {
+        "id": 10,
+        "titulo": "Projeto: Análise de Padrões de Comportamento nos Vídeos de Segurança CEUB",
+        "status": "DISPONÍVEL",
+        "professor": "Walner",
+        "categoria": "Projetos do CEUB",
+        "descricao_curta": "Monitoramento inteligente por vídeo para detectar situações de risco em tempo real.",
+        "imagem": "img/seguranca.png",
+        "detalhes": [
+            "A equipe de segurança do CEUB possui câmeras distribuídas em vários campi. O projeto propõe um sistema de IA que identifica comportamentos anômalos para aumentar a segurança.",
+            "O sistema poderá enviar alertas automáticos em casos de risco, como tumultos, quedas ou acidentes.",
+            "Gestor do Caderno: Prof. Walner de Oliveira – CEUB."
+        ],
+        "links": {}
+    },
+    {
+        "id": 11,
+        "titulo": "Projeto: Sistema de Controle e Medidas de Flexibilidade e Esforço Físico CEUB",
+        "status": "DISPONÍVEL",
+        "professor": "André Arantes / Walner",
+        "categoria": "Projetos do CEUB",
+        "descricao_curta": "Sistema de automação para coleta e análise de dados de flexibilidade e esforço físico em alunos de escolas.",
+        "imagem": "img/esforco.png",
+        "detalhes": [
+            "O projeto é uma continuidade de iniciativa desenvolvida em 2024 para controle de medidas de flexibilidade e esforço físico.",
+            "Desenvolvido em parceria com o curso de Educação Física do CEUB, coleta dados e gera relatórios sobre desempenho estudantil.",
+            "Gestor do Caderno: Prof. Walner de Oliveira – CEUB."
+        ],
+        "links": {}
+    },
+    {
+        "id": 12,
+        "titulo": "Projeto: Automação da Categorização de Transcrições",
+        "status": "EXECUTADO",
+        "professor": "Walner",
+        "categoria": "Projetos do CEUB",
+        "descricao_curta": "Sistema para automatizar a categorização de transcrições de pesquisa em Psicologia, reduzindo o esforço manual.",
+        "imagem": "img/transcricoes.png",
+        "detalhes": [
+            "O projeto propõe um sistema que utiliza planilhas Excel e arquivos JSON para automatizar a categorização de transcrições.",
+            "A solução visa reduzir o tempo de análise, aumentar a precisão e consistência e otimizar o trabalho dos pesquisadores.",
+            "Benefícios: redução do trabalho manual, maior precisão e escalabilidade, além de otimização do tempo dos pesquisadores.",
+            "Gestor do Caderno: Prof. Walner de Oliveira – CEUB."
+        ],
+        "links": {}
+    },
+    {
+        "id": 13,
+        "titulo": "Projeto: Sistema de Gestão do Caderno de Projetos de TI - SisCPTI",
+        "status": "NOSSO PROJETO!! ",
+        "professor": "-",
+        "categoria": "Projetos do CEUB",
+        "descricao_curta": "Sistema para cadastro, acompanhamento e sugestão de novos projetos de TI do CEUB.",
+        "imagem": "img/siscpti.png",
+        "detalhes": [
+            "O SisCPTI centraliza, acompanha e documenta os projetos de TI do CEUB."
+        ],
+        "links": {}
+    },
+    {
+        "id": 14,
+        "titulo": "Projeto AuMeow",
+        "status": "EM EXECUÇÃO",
+        "professor": "Flaviana / Walner / Valdemir",
+        "categoria": "Projetos do CEUB",
+        "descricao_curta": "Aplicativo para gestão de cuidados, serviços e vacinação de animais de estimação.",
+        "imagem": "img/aumeow.png",
+        "detalhes": [
+            "O aplicativo AuMeow foi criado para facilitar a vida dos donos de pets, oferecendo controle de vacinas, marketplace e canal de comunicação entre tutores e profissionais.",
+            "O sistema atende demandas reais de praticidade e organização para quem adota ou compra animais, integrando diversos serviços.",
+            "Gestores do Caderno: Prof. Walner de Oliveira, Prof. Valdemir e Prof. Flaviana – CEUB."
+        ],
+        "links": {}
+    },
+    {
+        "id": 15,
+        "titulo": "Análise exploratória para tomada de decisões em Gestão Educacional",
+        "status": "EM EXECUÇÃO",
+        "professor": "Juliana / Walner",
+        "categoria": "Empresas do Setor Privado",
+        "descricao_curta": "Projeto voltado à modernização da gestão educacional e uso de dados e blockchain para análise estratégica.",
+        "imagem": "img/isg.png",
+        "detalhes": [
+            "A ISG atua na modernização da gestão pública e privada e busca diferenciação no mercado por meio de inovação em dados e blockchain."
+        ]
+    },
+    {
+        "id": 16,
+        "titulo": "Projeto Canal Educação na Secretaria de Educação do Estado do Piauí",
+        "status": "DISPONÍVEL",
+        "professor": "Walner",
+        "categoria": "Empresas do Setor Privado",
+        "descricao_curta": "Infraestrutura digital educacional robusta oferecida pela Oros Soluções Educacionais.",
+        "imagem": "img/oros.png",
+        "detalhes": [
+            "A Oros oferece plataformas digitais inovadoras e recursos interativos voltados a secretarias e instituições de ensino."
+        ]
+    },
+    {
+        "id": 17,
+        "titulo": "Projeto de Gerenciamento de Kits de Mediação Tecnológica",
+        "status": "DISPONÍVEL",
+        "professor": "Walner",
+        "categoria": "Empresas do Setor Privado",
+        "descricao_curta": "Solução para gestão eficiente de equipamentos nos polos da Oros Soluções Educacionais.",
+        "imagem": "img/oros.png",
+        "detalhes": [
+            "O projeto propõe sistema de controle de kits de mediação tecnológica e rastreabilidade de equipamentos."
+        ]
+    },
+    {
+        "id": 18,
+        "titulo": "Algoritmo de Correção Automática de Redação e de Individualização do Ensino",
+        "status": "DISPONÍVEL",
+        "professor": "Walner",
+        "categoria": "Empresas do Setor Privado",
+        "descricao_curta": "Plataforma de ensino adaptativo com IA e metaverso, desenvolvida pela Estudologia.",
+        "imagem": "img/estudologia.png",
+        "detalhes": [
+            "A Estudologia atua com ensino adaptativo e metaverso, buscando escalabilidade e inovação em inteligência artificial."
+        ]
+    },
+    {
+        "id": 19,
+        "titulo": "Implementação Adicional no Software Smart Canvas",
+        "status": "DISPONÍVEL",
+        "professor": "Walner",
+        "categoria": "Empresas do Setor Privado",
+        "descricao_curta": "Integrações e melhorias no software Smart Canvas, plataforma de gestão estratégica ágil.",
+        "imagem": "img/smartcanvas.png",
+        "detalhes": [
+            "A EPTG Soluções Ágeis desenvolve o Smart Canvas, sistema usado por mais de 500 clientes e que busca integração com APIs externas."
+        ]
+    },
+    {
+        "id": 20,
+        "titulo": "Projeto TIA – Tutora de Inteligência Artificial Interativa",
+        "status": "INDISPONÍVEL",
+        "professor": "Walner / Juliana",
+        "categoria": "Empresas do Setor Privado",
+        "descricao_curta": "Plataforma de aprendizado online baseada em IA para personalização do ensino e feedback em tempo real.",
+        "imagem": "img/tia.png",
+        "detalhes": [
+            "A TIA é uma plataforma que utiliza IA para personalizar o ensino, analisando o desempenho dos alunos e sugerindo trilhas de aprendizado.",
+            "Objetivos tecnológicos: avatar interativo, PLN avançado e integração segura em nuvem."
+        ]
+    }
 ]
