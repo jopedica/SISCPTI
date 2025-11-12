@@ -5,15 +5,6 @@ Protótipo funcional de sistema web desenvolvido em Flask (Python), com o objeti
 A proposta é demonstrar a arquitetura, a interface e o fluxo de funcionamento de uma aplicação que, futuramente, poderá ser expandida para um sistema completo com banco de dados e autenticação avançada.
 ---
 
-## **Sumário**
-- [Objetivos do Projeto](#-objetivos-do-projeto)
-- [Funcionalidades Principais](#-funcionalidades-principais)
-- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [Como Executar o Projeto](#-como-executar-o-projeto)
-- [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Futuras Implementações](#-futuras-implementações)
-
----
 
 ##  **Objetivos do Projeto**
 
