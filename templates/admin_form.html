@@ -1,42 +1,49 @@
-{% extends 'base.html' %}
-{% block title %}{{ 'Editar' if projeto else 'Novo' }} Projeto · SisCPTI{% endblock %}
-{% block content %}
-
 <section class="admin-form-section">
   <h2>{{ 'Editar' if projeto else 'Novo' }} Projeto</h2>
 
   <form method="POST" class="admin-form">
     <div class="form-group">
       <label for="titulo">Título:</label>
-      <input type="text" id="titulo" name="titulo" value="{{ projeto.titulo if projeto else '' }}" required>
+      <input type="text" id="titulo" name="titulo" value="{{ projeto.get('titulo', '') }}" required>
     </div>
 
     <div class="form-group">
       <label for="categoria">Categoria:</label>
-      <input type="text" id="categoria" name="categoria" value="{{ projeto.categoria if projeto else '' }}" required>
+      <select id="categoria" name="categoria" required>
+        <option value="" disabled {% if not projeto.get('categoria') %}selected{% endif %}>Selecione uma categoria</option>
+        <option value="Responsabilidade Social" {% if projeto.get('categoria') == 'Responsabilidade Social' %}selected{% endif %}>Responsabilidade Social</option>
+        <option value="Projetos do CEUB" {% if projeto.get('categoria') == 'Projetos do CEUB' %}selected{% endif %}>Projetos do CEUB</option>
+        <option value="Empresas do Setor Privado" {% if projeto.get('categoria') == 'Empresas do Setor Privado' %}selected{% endif %}>Empresas do Setor Privado</option>
+      </select>
     </div>
 
     <div class="form-group">
       <label for="status">Status:</label>
-      <input type="text" id="status" name="status" value="{{ projeto.status if projeto else '' }}" required>
+      <select id="status" name="status" required>
+        <option value="" disabled {% if not projeto.get('status') %}selected{% endif %}>Selecione o status</option>
+        <option value="DISPONÍVEL" {% if projeto.get('status') == 'DISPONÍVEL' %}selected{% endif %}>Disponível</option>
+        <option value="EM EXECUÇÃO" {% if projeto.get('status') == 'EM EXECUÇÃO' %}selected{% endif %}>Em Execução</option>
+        <option value="EXECUTADO" {% if projeto.get('status') == 'EXECUTADO' %}selected{% endif %}>Executado</option>
+        <option value="INDISPONÍVEL" {% if projeto.get('status') == 'INDISPONÍVEL' %}selected{% endif %}>Indisponível</option>
+      </select>
     </div>
 
     <div class="form-group">
       <label for="professor">Professor:</label>
-      <input type="text" id="professor" name="professor" value="{{ projeto.professor if projeto else '' }}">
+      <input type="text" id="professor" name="professor" value="{{ projeto.get('professor', '') }}">
     </div>
 
     <div class="form-group">
       <label for="descricao_curta">Descrição curta:</label>
-      <textarea id="descricao_curta" name="descricao_curta" rows="2">{{ projeto.descricao_curta if projeto else '' }}</textarea>
+      <textarea id="descricao_curta" name="descricao_curta" rows="2">{{ projeto.get('descricao_curta', '') }}</textarea>
     </div>
 
     <div class="form-group">
       <label for="detalhes">Detalhes:</label>
-      <textarea id="detalhes" name="detalhes" rows="5">{{ projeto.detalhes[0] if projeto else '' }}</textarea>
+      <textarea id="detalhes" name="detalhes" rows="5">{{ projeto.get('detalhes', [''])[0] }}</textarea>
     </div>
 
-    <button type="submit" class="btn-save"> Salvar Projeto</button>
+    <button type="submit" class="btn-save">Salvar Projeto</button>
   </form>
 </section>
 
@@ -69,7 +76,8 @@
   }
 
   .admin-form input,
-  .admin-form textarea {
+  .admin-form textarea,
+  .admin-form select {
     width: 100%;
     padding: 0.6rem 0.8rem;
     border: 1px solid #ccc;
@@ -77,10 +85,12 @@
     font-size: 1rem;
     font-family: inherit;
     transition: border-color 0.3s ease;
+    background-color: #fff;
   }
 
   .admin-form input:focus,
-  .admin-form textarea:focus {
+  .admin-form textarea:focus,
+  .admin-form select:focus {
     outline: none;
     border-color: #7A1BB5;
     box-shadow: 0 0 0 2px rgba(123, 27, 181, 0.2);
@@ -104,5 +114,3 @@
     background: #7A1BB5;
   }
 </style>
-
-{% endblock %}

@@ -170,7 +170,8 @@ def novo_projeto():
         flash("✅ Projeto criado com sucesso!", "success")
         return redirect(url_for('admin_dashboard'))
 
-    return render_template('admin_form.html', projeto=None)
+    return render_template('admin_form.html', projeto={})
+
 
 
 @app.route('/admin/editar/<int:projeto_id>', methods=['GET', 'POST'])

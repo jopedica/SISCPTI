@@ -189,13 +189,14 @@
     {
         "id": 13,
         "titulo": "Projeto: Sistema de Gestão do Caderno de Projetos de TI - SisCPTI",
-        "status": "NOSSO PROJETO!! ",
+        "status": "DISPONÍVEL",
         "professor": "-",
         "categoria": "Projetos do CEUB",
         "descricao_curta": "Sistema para cadastro, acompanhamento e sugestão de novos projetos de TI do CEUB.",
         "imagem": "img/siscpti.png",
         "detalhes": [
-            "O SisCPTI centraliza, acompanha e documenta os projetos de TI do CEUB."
+            "O SisCPTI centraliza, acompanha e documenta os projetos de TI do CEUB.",
+            "Principais funcionalidades: visualização dos projetos, sugestão de novos projetos e acompanhamento geral do portfólio."
         ],
         "links": {}
     },
