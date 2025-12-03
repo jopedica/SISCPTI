@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}SisCPTI · Caderno de Projetos TI UniCEUB{% endblock %}</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v=3">
+
 
   <style>
     /* ===== Estrutura base para manter o footer fixo ao final ===== */
@@ -104,6 +105,6 @@
     <p>© 2025 UniCEUB · Sistema de Gestão do Caderno de Projetos de TI (SisCPTI)</p>
   </footer>
 
-  <script src="{{ url_for('static', filename='script.js') }}"></script>
-</body>
+  <script src="{{ url_for('static', filename='script.js') }}?v=3"></script>
+
 </html>
