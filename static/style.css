@@ -444,3 +444,89 @@ h3 {
   color: #7A1BB5;
   font-style: italic;
 }
+
+.ceub-header {
+  background: #fff;
+  padding: 0.8rem 0 0.3rem 0;
+  border-bottom: none;
+  position: relative;
+  z-index: 1000;
+}
+
+
+/* Botão hambúrguer (mobile) */
+.hamburger {
+  display: none;              /* só mostra no mobile (via @media) */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  border-radius: 999px;
+  background: #4B006E;        /* roxo do projeto */
+  transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+}
+
+/* Animação em X quando o menu está aberto */
+.hamburger.is-open span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.is-open span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+
+/* =====================
+   MENU MOBILE
+===================== */
+@media (max-width: 768px) {
+
+  .ceub-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Mostra o botão hambúrguer no mobile */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Menu começa escondido no mobile */
+  .ceub-nav {
+    position: absolute;
+    top: 100%;          /* logo abaixo do header */
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: none;
+  }
+
+  .ceub-nav ul {
+    flex-direction: column;       /* links em coluna */
+    align-items: flex-start;
+    padding: 1rem 5%;
+    gap: 1rem;
+  }
+
+  /* Quando o JS adicionar .nav-open, o menu aparece */
+  .ceub-nav.nav-open {
+    display: block;
+  }
+}
