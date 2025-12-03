@@ -2,6 +2,21 @@ console.log("SisCPTI carregado com sucesso!");
 
 console.log("SisCPTI iniciado com sucesso!");
 
+// Menu hambúrguer (mobile)
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector(".ceub-nav");
+
+  if (!hamburger || !nav) return;
+
+  hamburger.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("nav-open");
+    hamburger.classList.toggle("is-open", isOpen);
+    hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+});
+
+
 // Filtro de projetos
 document.addEventListener("DOMContentLoaded", () => {
   const filterButtons = document.querySelectorAll(".filter-btn");
