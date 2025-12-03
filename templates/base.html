@@ -58,33 +58,41 @@
 <body>
   <!-- ===== CABEÇALHO CEUB ===== -->
   <header class="ceub-header">
-    <div class="ceub-container">
-      <a href="{{ url_for('index') }}">
-        <img src="{{ url_for('static', filename='logoCEUB.png') }}" alt="Logo CEUB" class="ceub-logo">
-      </a>
+  <div class="ceub-container">
+    <a href="{{ url_for('index') }}">
+      <img src="{{ url_for('static', filename='logoCEUB.png') }}" alt="Logo CEUB" class="ceub-logo">
+    </a>
 
-      <nav class="ceub-nav">
-        <ul class="nav-links">
-          <li><a href="{{ url_for('index') }}">Início</a></li>
-          <li><a href="{{ url_for('projetos') }}">Projetos</a></li>
-          <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+    <!-- Botão hambúrguer (aparece só no mobile) -->
+    <button class="hamburger" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-          {% if session.get('logged_in') %}
-            {% if session.get('role') == 'admin' %}
-              <li><a href="{{ url_for('admin_dashboard') }}">Painel Admin</a></li>
-            {% endif %}
-            <li><a href="{{ url_for('submissao') }}">Submissão</a></li>
-            <li><a href="{{ url_for('logout') }}">Sair ({{ session.get('user') }})</a></li>
-          {% else %}
-            <li><a href="{{ url_for('login') }}">Login</a></li>
+    <nav class="ceub-nav">
+      <ul class="nav-links">
+        <li><a href="{{ url_for('index') }}">Início</a></li>
+        <li><a href="{{ url_for('projetos') }}">Projetos</a></li>
+        <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+
+        {% if session.get('logged_in') %}
+          {% if session.get('role') == 'admin' %}
+            <li><a href="{{ url_for('admin_dashboard') }}">Painel Admin</a></li>
           {% endif %}
-        </ul>
-      </nav>
-    </div>
+          <li><a href="{{ url_for('submissao') }}">Submissão</a></li>
+          <li><a href="{{ url_for('logout') }}">Sair ({{ session.get('user') }})</a></li>
+        {% else %}
+          <li><a href="{{ url_for('login') }}">Login</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>
 
-    <!-- Linha roxa inferior -->
-    <div class="ceub-line"></div>
-  </header>
+  <!-- Linha roxa inferior -->
+  <div class="ceub-line"></div>
+</header>
+
 
   <!-- ===== CONTEÚDO PRINCIPAL ===== -->
   <main>
