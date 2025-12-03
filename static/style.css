@@ -538,3 +538,29 @@ h3 {
     display: block;
   }
 }
+
+/* DEBUG: deixar o hambúrguer BEM visível no mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 999px;
+    border: 2px solid #4B006E;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2000;
+  }
+
+  .hamburger span {
+    display: block;
+    height: 3px;
+    border-radius: 999px;
+    background: #4B006E !important; /* força roxo mesmo se outro CSS mexer */
+  }
+}
